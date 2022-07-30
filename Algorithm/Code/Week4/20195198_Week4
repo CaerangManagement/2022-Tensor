@@ -1,0 +1,24 @@
+# 1037
+
+n = int(input())
+
+nums = list(map(int, input().split()))
+
+mx_nums = max(nums)
+mn_nums = min(nums)
+
+print(mx_nums * mn_nums)
+
+
+# 20949
+
+n = int(input())
+
+li = []
+
+for i in range(n):
+    w,h = map(int, input().split())
+    li.append([w*w + h*h, i])
+
+for i in sorted(li, key = lambda x : (-x[0], x[1])):
+    print(i[1] + 1)
