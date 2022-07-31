@@ -1,0 +1,37 @@
+# 11650
+
+import sys
+
+n = int(sys.stdin.readline())
+l1 = []
+
+for i in range(n):
+    l1.append(list(map(int, sys.stdin.readline().split())))
+l1.sort(key=lambda x : (x[0], x[1]))
+
+for i in l1:
+    print(i[0],i[1])
+    
+    
+# 13458
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+
+AI = list(map(int, input().split()))
+
+B, C = map(int, input().split())
+
+re = 0
+
+for i in AI:
+    i -= B
+    cnt = 1
+    if i > 0:
+        cnt += i // C
+        if i % C != 0:
+            cnt += 1
+    re += cnt
+
+print(re)
