@@ -39,7 +39,7 @@ OOOOXOOOOXOOOOX
 ```
 
 ## 문제 3 소수찾기 ([백준 1978](https://www.acmicpc.net/problem/1978))
-난이도 : 실버 1  
+난이도 : 실버 5  
 
 ![03](https://user-images.githubusercontent.com/87704014/185606675-9c31b39c-d1b3-4884-b5bc-2ffa2d1bd2b8.png)
 
