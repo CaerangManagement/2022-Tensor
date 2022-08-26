@@ -1,0 +1,84 @@
+#2748
+n=int(input())
+
+def fin(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    elif n == 2:
+        return 1
+    else:
+        return fin(n-2) + fin(n-1)
+print(fin(n))
+
+
+
+
+#8958
+n=int(input())
+
+for i in range(n):
+    list1 = list(input())
+
+    sum = 0
+    score = 0
+
+    for j in list1:
+        if j =='O':
+            score = score + 1
+        else:
+            score = 0
+        sum = sum + score
+    print(sum)
+
+#3077
+import math
+
+cnt = int(input())
+
+cor = input().split()
+ans = input().split()
+
+cor_dict = dict()
+ans_point = 0
+
+for i,v in enumerate(cor):
+    temp_dict = dict()
+
+    for jv in cor[i+1:]:
+        temp_dict[jv] = True
+        
+    cor_dict[v] = temp_dict
+
+for i,v in enumerate(ans[:-1]):
+    for j,jv in enumerate(ans[i+1:]):
+        if jv in cor_dict[v].keys():
+            ans_point += 1
+
+all_cnt = (cnt * (cnt - 1)) / 2
+print(str(ans_point) + '/' + str(math.floor(all_cnt)))
+
+#1978
+ltNonePrime = [2,3,5,7,11,13,17,19,23,29,31]
+
+def isPrime(n):
+    if n <= 1:
+        return False
+    elif n in ltNonePrime:
+        return True
+    else:
+        for kk in ltNonePrime:
+            if n%kk == 0:
+                return False
+        return True
+    
+n = int(input())
+lt1 = list(map(int,input().split()))
+cnt = 0
+
+for kk in lt1:
+    if isPrime(kk):
+        cnt += 1
+        
+print(cnt)
